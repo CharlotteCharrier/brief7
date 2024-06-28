@@ -59,15 +59,6 @@ public class CartController {
         return cartRepository.save(newCart);
     }
 
-    //ajouter un product à mon cart
-    //TODO checker si ça fonctionne
-//    @PostMapping("/{id}")
-//    public Cart addProductToCart(@PathVariable Integer id, @RequestBody Product product) {
-//            Cart currentCart = cartRepository.findById(id).get();
-//            currentCart.getProducts().add(product);
-//            return cartRepository.save(currentCart);
-//    }
-
     //ajouter un produit dans mon cart avec un DTO pour récupérer l'id de mon produit
     @PutMapping("/{id}/products")
     public Cart addProductToCart(@PathVariable Integer id, @RequestBody AddProductToCartMessage productId) {

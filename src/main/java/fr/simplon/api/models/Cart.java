@@ -35,7 +35,7 @@ public class Cart {
     @ManyToMany
     private List<Product> products = new ArrayList<>();
 
-    //private Boolean isOrdered = false;
+    private Boolean isOrdered = false;
 
 }
 
